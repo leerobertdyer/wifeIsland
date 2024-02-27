@@ -12,7 +12,6 @@ export default function HomePage() {
             "url(https://previews.dropbox.com/p/thumb/ACOKNqkhtyAVRAlr1Qj0ZjBh38Pf9Jf-DqYykVVLKr42tL41f47bq0HxZJqqHmk1T-bhJPwDH5IcpLFD7I3CKoOpZdEw0zCb2ugK-XGZoTLVuAH1hgn0von1Ex_6g3xC0I2irvd9gAVaI8dh6MLxrr1B8Cb9pOOePCK7JwStA2ajCX6Th9-F03u01P0zavtEpbCD0b8T1IJ53n8EbfGde863DsENIUtebxqVH3nADQi1CY99DlVKRhZj92Rwxp-7ZvL5aaSKXNgDn2jQzGB0cFbwPN1ehaE9aDAmb6fGfSXDEZ18sa9EUmG4C_9EJ5CYWQJVR-i6n-2BoRYaiCXOLVuT/p.jpeg)",
           backgroundSize: "cover",
         }}
-        className="min-h-screen"
       >
         <div
           className="
@@ -22,14 +21,14 @@ export default function HomePage() {
         flex-col 
         items-center 
         justify-start 
-        gap-4 
+        gap-2
         bg-gradient-to-br 
         from-[#ebddff7a] 
         to-[#ffddfcb3] 
         text-black"
         >
-            <Links />
-          <div className="h-80 w-80 mt-3">
+          <Links />
+          <div className="mt-2 w-10 h-10" style={{width: '27vw', height: '27vw'}}>
             <Image
               src="/logo.png"
               width={200}
@@ -39,7 +38,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="h-20 w-60 flex items-center">
+          <div className="flex h-20 w-60 items-center">
             <Image
               src="/wifeIslandText.png"
               width={300}
@@ -48,9 +47,13 @@ export default function HomePage() {
               alt=""
             />
           </div>
-          <p>video</p>
+          <iframe
+            src="https://www.youtube.com/embed/IHQknZV8hLA"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded-lg border-white border-solid border-4"
+          ></iframe>
           <p>picture carousel</p>
-          <p>Music</p>
           <p>Calendar</p>
         </div>
       </main>

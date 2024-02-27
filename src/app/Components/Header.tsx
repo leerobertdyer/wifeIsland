@@ -3,7 +3,6 @@ import { BsFacebook } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { indie } from "../fonts";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Header() {
   return (

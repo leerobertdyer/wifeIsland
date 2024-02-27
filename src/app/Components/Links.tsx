@@ -3,39 +3,46 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Links() {
-
   const pathName = usePathname();
-  let firstLink = '/bio';
-  let secondLink = '/listen';
-  let thirdLink = '/shows';
-  let firstName = 'Bio'
-  let secondName = 'Listen'
-  let thirdName = 'Shows'
+  let firstLink = "/bio";
+  let secondLink = "/listen";
+  let thirdLink = "/shows";
+  let firstName = "Bio";
+  let secondName = "Listen";
+  let thirdName = "Shows";
 
-  switch(pathName)
-  {
-    case '/bio':
-        firstLink = '/'
-        firstName = 'Home'
-        break
-    case '/listen':
-        secondLink = '/'
-        secondName = "Home"
-        break
-    case '/shows':
-        thirdLink = '/'
-        thirdName = "Home"
-        break
+  switch (pathName) {
+    case "/":
+      firstLink = "/bio";
+      secondLink = "/listen";
+      thirdLink = "/shows";
+      firstName = "Bio";
+      secondName = "Listen";
+      thirdName = "Shows";
+      console.log(firstName);
+      break;
+    case "/bio":
+      firstLink = "/";
+      firstName = "Home";
+      break;
+    case "/listen":
+      secondLink = "/";
+      secondName = "Home";
+      break;
+    case "/shows":
+      thirdLink = "/";
+      thirdName = "Home";
+      break;
   }
 
   return (
     <div
-      className="
-    mt-3 
-    flex 
+      className=" 
+    flex
     w-full 
     justify-around 
     gap-3 
+    pt-4 
     sm:gap-7 
     md:gap-10"
     >
@@ -54,7 +61,9 @@ export default function Links() {
         text-white 
         hover:bg-rose-700 
         md:max-w-40"
-      >{firstName}</Link>
+      >
+        {firstName}
+      </Link>
       <Link
         href={secondLink}
         className="
