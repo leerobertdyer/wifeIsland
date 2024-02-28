@@ -1,8 +1,14 @@
+"use client";
 import Header from "./Components/Header";
 import Links from "./Components/Links";
 import Image from "next/image";
+import { getPublicCalendarEvents } from "googleCalendar";
+import { useEffect, useState } from "react";
+
 
 export default function HomePage() {
+
+
   return (
     <>
       <Header />
@@ -28,30 +34,38 @@ export default function HomePage() {
         text-black"
         >
           <Links />
-          <div className="mt-2 w-10 h-10" style={{width: '27vw', height: '27vw'}}>
+          <div
+            className="mt-4"
+            style={{
+              width: "20vw",
+              height: "20vw",
+              maxWidth: "200px",
+              maxHeight: "200px",
+            }}
+          >
             <Image
               src="/logo.png"
               width={200}
               height={200}
-              layout="responsive"
+              className="w-full"
               alt=""
             />
           </div>
 
           <div className="flex h-20 w-60 items-center">
-            <Image
-              src="/wifeIslandText.png"
-              width={300}
-              height={100}
-              layout="responsive"
-              alt=""
-            />
+            <Image src="/wifeIslandText.png" width={300} height={100} alt="" />
           </div>
           <iframe
-            src="https://www.youtube.com/embed/IHQknZV8hLA"
+            src="https://www.youtube-nocookie.com/embed/IHQknZV8hLA"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="rounded-lg border-white border-solid border-4"
+            className="rounded-lg border-4 border-solid border-white"
+            style={{
+              width: "90vw",
+              height: "60vw",
+              maxWidth: "650px",
+              maxHeight: "350px",
+            }}
           ></iframe>
           <p>picture carousel</p>
           <p>Calendar</p>

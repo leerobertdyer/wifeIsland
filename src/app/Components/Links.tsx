@@ -4,24 +4,25 @@ import { usePathname } from "next/navigation";
 
 export default function Links() {
   const pathName = usePathname();
-  let firstLink = "/bio";
+  let firstLink = "/epk";
   let secondLink = "/listen";
   let thirdLink = "/shows";
-  let firstName = "Bio";
+  let firstName = "EPK";
   let secondName = "Listen";
   let thirdName = "Shows";
 
   switch (pathName) {
     case "/":
-      firstLink = "/bio";
+      firstLink = "/epk";
       secondLink = "/listen";
       thirdLink = "/shows";
-      firstName = "Bio";
+      firstName = "EPK";
       secondName = "Listen";
       thirdName = "Shows";
-      console.log(firstName);
+
+    
       break;
-    case "/bio":
+    case "/epk":
       firstLink = "/";
       firstName = "Home";
       break;
