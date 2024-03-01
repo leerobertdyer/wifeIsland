@@ -120,8 +120,8 @@ export default function PhotoGallery() {
                   className="
       relative 
       flex
-      h-[150px] 
-      w-[150px] 
+      h-[250px] 
+      w-[250px] 
       items-center 
       justify-center 
       overflow-hidden
@@ -133,8 +133,8 @@ export default function PhotoGallery() {
                   <Image
                     className="
               border-3 
-              min-h-[150px] 
-              min-w-[150px]
+              min-h-[250px] 
+              min-w-[250px]
               rounded-md
               border-white
               hover:cursor-pointer
