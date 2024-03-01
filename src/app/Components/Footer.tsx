@@ -12,7 +12,9 @@ export default function Footer() {
     justify-center
     border-t-2 
     border-rose-800 
-    bg-rose-200"
+     bg-gradient-to-b
+     from-purple-200
+     to-rose-200"
     >
       <p className="xl text-center">Check out our full band</p>
       <a
