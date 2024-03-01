@@ -2,28 +2,9 @@
 import Header from "./Components/Header";
 import Links from "./Components/Links";
 import Image from "next/image";
-import { getPhotos } from "flickr";
-import { useEffect, useState } from "react";
 
-type Photo = {
-  id: string
-  url_s: string,
-  url_l: string
-}
 
 export default function HomePage() {
-  const [photos, setPhotos] = useState<Photo[]>([])
-
-useEffect(() => {
-  const fetchPhotos = async() => 
-  {
-    const allPhotos: Photo[] = await getPhotos()
-    setPhotos(allPhotos || [])
-  }
-  fetchPhotos().catch(() => {
-    console.log('fucking typescript hell!');
-  });
-}, [])
 
   return (
     <>
@@ -31,8 +12,8 @@ useEffect(() => {
       <main
         style={{
           backgroundImage:
-            "url(https://previews.dropbox.com/p/thumb/ACOKNqkhtyAVRAlr1Qj0ZjBh38Pf9Jf-DqYykVVLKr42tL41f47bq0HxZJqqHmk1T-bhJPwDH5IcpLFD7I3CKoOpZdEw0zCb2ugK-XGZoTLVuAH1hgn0von1Ex_6g3xC0I2irvd9gAVaI8dh6MLxrr1B8Cb9pOOePCK7JwStA2ajCX6Th9-F03u01P0zavtEpbCD0b8T1IJ53n8EbfGde863DsENIUtebxqVH3nADQi1CY99DlVKRhZj92Rwxp-7ZvL5aaSKXNgDn2jQzGB0cFbwPN1ehaE9aDAmb6fGfSXDEZ18sa9EUmG4C_9EJ5CYWQJVR-i6n-2BoRYaiCXOLVuT/p.jpeg)",
-          backgroundSize: "cover",
+            "url(/camper.jpg)",
+          backgroundSize: "cover"
         }}
       >
         <div

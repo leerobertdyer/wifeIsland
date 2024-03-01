@@ -9,7 +9,9 @@ const apiUrl = 'https://api.flickr.com/services/rest/';
 type Photo = {
     id: string
     url_s: string,
-    url_l: string
+    url_l: string,
+    width_s?: string,
+    height_s?: string
 }
 
 type FlickrResponse= {
@@ -36,7 +38,7 @@ export async function getPhotos(): Promise<Photo[]>  {
         tags: 'wifeisland',
         per_page: '100',
         page: '1',
-        extras: 'url_s, url_l', 
+        extras: 'url_s, url_l, width_s, height_s', 
         format: 'json',
         nojsoncallback: '1', 
       });

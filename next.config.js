@@ -7,4 +7,10 @@ await import("./src/env.js");
 /** @type {import("next").NextConfig} */
 const config = {};
 
+
+    config.images = {
+      domains: ['live.staticflickr.com'],
+  }
+  
+
 export default config;
