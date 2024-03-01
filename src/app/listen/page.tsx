@@ -8,8 +8,10 @@ export default function Listen() {
       <div
 
         style={{
-          backgroundImage: "url(/backsOnRoof.jpg)",
-          backgroundSize: "cover",
+          backgroundImage: "url(/logo.png)",
+          backgroundSize: '100vw',
+          backgroundRepeat: 'no-repeat',
+          backgroundPositionY: '60px'
         }}
       >
         <Links />
