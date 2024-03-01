@@ -10,7 +10,7 @@ export default function HomePage() {
       <Header />
       <main
         style={{
-          backgroundImage: "url(/camper.jpg)",
+          backgroundImage: "url(/camper.jpeg)",
           backgroundSize: "cover",
         }}
       >
