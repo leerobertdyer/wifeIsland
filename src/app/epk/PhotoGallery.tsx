@@ -25,6 +25,7 @@ export default function PhotoGallery() {
   const expandPhoto = (photo: Photo) => {
     setCurrentPhoto(photo);
     setDisplayPhoto(true);
+    window.scrollTo(0, 0)
   };
 
   const downloadPhoto = async (photoLink: string) => {
@@ -55,13 +56,14 @@ export default function PhotoGallery() {
   return (
     <>
       {displayPhoto ? (
-        <div className="absolute left-0 top-0 h-screen w-screen bg-purple-400">
+        <div className="absolute left-0 top-0 h-screen w-screen bg-purple-400 flex justify-center items-center">
           <Image
             width={Number(currentPhoto.width_l)}
             height={Number(currentPhoto.height_l)}
             src={currentPhoto.url_l}
             alt="photoToDownload"
-            className="min-w-screen min-h-screen"
+            className='object-cover'
+            style={{width: '100vw'}}
           />
           <div className="absolute right-1 top-2 flex w-4/12 justify-center gap-5">
             <button
