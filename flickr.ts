@@ -7,11 +7,13 @@ const user_id = process.env.NEXT_PUBLIC_FLICKR_USER_ID
 const apiUrl = 'https://api.flickr.com/services/rest/';
 
 type Photo = {
-    id: string
-    url_s: string,
-    url_l: string,
-    width_s?: string,
-    height_s?: string
+    id: string;
+    url_s: string;
+    url_l: string;
+    width_s?: string;
+    height_s?: string;
+    width_l?: string;
+    height_l?: string;
 }
 
 type FlickrResponse= {
@@ -38,7 +40,7 @@ export async function getPhotos(): Promise<Photo[]>  {
         tags: 'wifeisland',
         per_page: '100',
         page: '1',
-        extras: 'url_s, url_l, width_s, height_s', 
+        extras: 'url_s, url_l, width_s, height_s, width_l, height_l', 
         format: 'json',
         nojsoncallback: '1', 
       });
@@ -50,7 +52,7 @@ try {
     const data = await response.json() as FlickrResponse;
     const photos = data.photos.photo
     shuffleArray(photos)
-    console.log('All WI Photos: ', photos)
+    // console.log('All WI Photos: ', photos)
     return photos
 } catch (error) {
     console.error(`error getting photos:`)

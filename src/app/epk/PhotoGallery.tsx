@@ -6,18 +6,24 @@ import Image from "next/image";
 type Photo = {
   id: string;
   url_s: string;
+  url_l: string;
   width_s?: string;
   height_s?: string;
-  url_l: string;
+  width_l?: string;
+  height_l?: string;
 };
 
 export default function PhotoGallery() {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [displayPhoto, setDisplayPhoto] = useState(false);
-  const [currentPhoto, setCurrentPhoto] = useState<string>("");
+  const [currentPhoto, setCurrentPhoto] = useState<Photo>({
+    id: "",
+    url_s: "",
+    url_l: "",
+  });
 
-  const expandPhoto = (photoURL: string) => {
-    setCurrentPhoto(photoURL);
+  const expandPhoto = (photo: Photo) => {
+    setCurrentPhoto(photo);
     setDisplayPhoto(true);
   };
 
@@ -51,9 +57,9 @@ export default function PhotoGallery() {
       {displayPhoto ? (
         <div className="absolute left-0 top-0 h-screen w-screen bg-purple-400">
           <Image
-            width={1600}
-            height={900}
-            src={currentPhoto}
+            width={Number(currentPhoto.width_l)}
+            height={Number(currentPhoto.height_l)}
+            src={currentPhoto.url_l}
             alt="photoToDownload"
             className="min-w-screen min-h-screen"
           />
@@ -82,7 +88,7 @@ export default function PhotoGallery() {
         py-2 
         font-bold 
         text-white"
-              onClick={() => downloadPhoto(currentPhoto)}
+              onClick={() => downloadPhoto(currentPhoto.url_l)}
             >
               Download
             </button>
@@ -131,11 +137,11 @@ export default function PhotoGallery() {
               border-white
               hover:cursor-pointer
               "
-                    width={200}
-                    height={200}
+                    width={Number(photo.width_s)}
+                    height={Number(photo.height_s)}
                     src={photo.url_s}
                     alt=""
-                    onClick={() => expandPhoto(photo.url_l)}
+                    onClick={() => expandPhoto(photo)}
                   />
                 </div>
               ))

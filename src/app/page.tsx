@@ -1,34 +1,33 @@
 "use client";
+import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Links from "./Components/Links";
 import Image from "next/image";
 
-
 export default function HomePage() {
-
   return (
     <>
       <Header />
       <main
         style={{
-          backgroundImage:
-            "url(/camper.jpg)",
-          backgroundSize: "cover"
+          backgroundImage: "url(/camper.jpg)",
+          backgroundSize: "cover",
         }}
       >
         <div
           className="
-        flex 
-        min-h-screen
+          flex min-h-screen
         min-w-full 
-        flex-col 
+        flex-col
         items-center 
         justify-start 
-        gap-2
+        gap-2 
         bg-gradient-to-br 
-        from-[#ebddff7a] 
+        from-[#ebddff7a]
         to-[#ffddfcb3] 
-        text-black"
+        pb-0 
+        text-black 
+        sm:pb-20"
         >
           <Links />
           <div
@@ -64,13 +63,11 @@ export default function HomePage() {
               maxHeight: "350px",
             }}
           ></iframe>
-          <p>picture carousel</p>
-          <p>Calendar</p>
         </div>
       </main>
 
       <footer>
-        <p>Footer</p>
+        <Footer />
       </footer>
     </>
   );
