@@ -21,7 +21,9 @@ export default function EPK() {
       <Links />
 
       <main className="flex w-full flex-col">
+        <div className="flex justify-center w-full">
        <Bio />
+        </div>
       <PhotoGallery />
       </main>
     </div>

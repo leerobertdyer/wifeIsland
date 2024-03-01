@@ -18,8 +18,7 @@ export default function Bio()
         bg-[#ffffffe2] 
         p-5 
         sm:ml-6 
-        sm:mt-14  
-        sm:w-1/2
+        sm:mt-14 
         `}
       >
         <h1 className="text-center text-2xl">Bio</h1>
