@@ -2,12 +2,28 @@
 import Header from "./Components/Header";
 import Links from "./Components/Links";
 import Image from "next/image";
-import { getPublicCalendarEvents } from "googleCalendar";
+import { getPhotos } from "flickr";
 import { useEffect, useState } from "react";
 
+type Photo = {
+  id: string
+  url_s: string,
+  url_l: string
+}
 
 export default function HomePage() {
+  const [photos, setPhotos] = useState<Photo[]>([])
 
+useEffect(() => {
+  const fetchPhotos = async() => 
+  {
+    const allPhotos: Photo[] = await getPhotos()
+    setPhotos(allPhotos || [])
+  }
+  fetchPhotos().catch(() => {
+    console.log('fucking typescript hell!');
+  });
+}, [])
 
   return (
     <>
