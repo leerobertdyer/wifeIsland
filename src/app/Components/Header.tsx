@@ -21,10 +21,10 @@ export default function Header() {
       "
     >
       <div id="social" className="flex w-1/6 flex-col gap-4">
-        <a href="https://www.instagram.com/_aunt_vicki/" target="_blank">
+        <a href="https://www.instagram.com/wife_island_/" target="_blank">
           <SlSocialInstagram className="h-3 w-3 sm:h-5 sm:w-5 md:h-7 md:w-7 hover:cursor-pointer" />
           </a>
-          <a href="https://www.facebook.com/AuntVickiBand/" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100089466515123" target="_blank">
         <BsFacebook className="h-3 w-3 sm:h-5 sm:w-5 md:h-7 md:w-7 hover:cursor-pointer" />
           </a>
       </div>
