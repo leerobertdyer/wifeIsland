@@ -5,6 +5,7 @@ export const metadata = {
   title: "Wife Island",
   description: "Dreamy Original Folk Music From Asheville, NC",
   icons: [{ rel: "icon", url: "/icon.png" }],
+  socialShareImage: '/flowersAndRiver.jpg'
 };
 
 export default function RootLayout({
